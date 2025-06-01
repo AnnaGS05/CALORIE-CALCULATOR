@@ -1,0 +1,422 @@
+.profile-page {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 600px;
+  font-family: 'Arial', sans-serif;
+}
+
+.main-title {
+  color: #4CAF50;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-section {
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #1A3C34;
+  font-weight: 500;
+}
+
+.gender-selection {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.gender-option {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #F5F5F5;
+  color: #37474F;
+}
+
+.gender-option.active {
+  background-color: #C8E6C9;
+  border-color: #4CAF50;
+  color: #1A3C34;
+  font-weight: 500;
+}
+
+.gender-option input {
+  display: none;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item label {
+  font-size: 0.9em;
+  color: #607D8B;
+  margin-bottom: 8px;
+}
+
+.info-item input {
+  padding: 10px 12px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  font-size: 1em;
+  background: #FAFAFA;
+  transition: border-color 0.3s;
+}
+
+.info-item input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.activity-description {
+  background: #F5F5F5;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 0.95em;
+  color: #455A64;
+  line-height: 1.4;
+}
+
+.activity-slider-container {
+  padding: 0 10px;
+}
+
+.activity-slider {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  background: #E0E0E0;
+  border-radius: 3px;
+  outline: none;
+  margin: 15px 0;
+}
+
+.activity-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  background: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.activity-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.goal-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.goal-option {
+  padding: 12px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  background: #F5F5F5;
+  transition: all 0.3s ease;
+  color: #37474F;
+}
+
+.goal-option.active {
+  background-color: #C8E6C9;
+  border-color: #4CAF50;
+  color: #1A3C34;
+  font-weight: 500;
+}
+
+.formula-options {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.formula-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95em;
+  color: #455A64;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.calculate-button {
+  padding: 14px 40px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.calculate-button:hover {
+  background: #43A047;
+  transform: translateY(-2px);
+}
+
+.calculate-button:disabled {
+  background: #B0BEC5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Стили для результатов */
+.profile-result {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.result-title {
+  margin: 0;
+  color: #1A3C34;
+  font-size: 1.8em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.result-card {
+  background: #ffffff;
+  border: 1px solid #E0E0E0;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #1A3C34;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bmi-card .progress-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #ECEFF1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+  background: linear-gradient(90deg, #42A5F5 0%, #66BB6A 50%, #EF5350 100%);
+}
+
+.bmi-value {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #37474F;
+  text-align: center;
+  margin: 0;
+}
+
+.bmi-category {
+  color: #78909C;
+  font-size: 1em;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.calorie-card .calorie-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.calorie-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  background: #E8F5E9;
+  border-radius: 50%;
+  border: 2px solid #C8E6C9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.calorie-value {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #1A3C34;
+  line-height: 1;
+}
+
+.calorie-unit {
+  font-size: 1em;
+  color: #607D8B;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.nutrients {
+  flex-grow: 1;
+}
+
+.nutrients p {
+  margin: 0;
+  color: #607D8B;
+  font-size: 1em;
+  font-weight: 400;
+  text-align: left;
+}
+
+.nutrient-value {
+  color: #1A3C34;
+  margin: 0 6px;
+  font-weight: 500;
+}
+
+.note {
+  font-size: 0.9em;
+  color: #90A4AE;
+  text-align: center;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.error-message {
+  color: #EF5350;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.action-button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+.edit-button {
+  background: #4CAF50;
+  color: white;
+}
+
+.edit-button:hover {
+  background: #43A047;
+}
+
+.reset-button {
+  background: #EF5350;
+  color: white;
+}
+
+.reset-button:hover {
+  background: #E53935;
+}
+
+@media (max-width: 600px) {
+  .profile-page {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .goal-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .formula-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .calorie-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .calorie-circle {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .calorie-value {
+    font-size: 2em;
+  }
+  
+  .nutrients p {
+    text-align: center;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .action-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
