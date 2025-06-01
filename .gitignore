@@ -22,4 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment
 .env
+
+# Additional ignores for your project
+.npm
+*.tsbuildinfo
+.vite
+tailwind.config.js.cache
